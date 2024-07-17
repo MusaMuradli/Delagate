@@ -1,0 +1,5 @@
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.csproj.AssemblyReference.cache
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.AssemblyInfoInputs.cache
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.AssemblyInfo.cs
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.csproj.CoreCompileInputs.cache
