@@ -10,58 +10,104 @@ namespace Delagate;
 
 public class CustomList<T> : IEnumerable<T>
 {
-    private List<T> values;
+    private T[] array;
+    public int Count { get => array.Length; }
     public CustomList()
     {
-        values = new List<T>();
+        array = new T[0];
     }
+
+    public T this[int index]
+    {
+        get => array[index];
+        set => array[index] = value;
+    }
+
+
     public void Add(T item)
     {
-        values.Add(item);
-    }
-    public T Find(Predicate<T> item)
-    {
-        if (item == null)
-        {
-            throw new ArgumentNullException(nameof(item));
-        }
+        Array.Resize(ref array, array.Length + 1);
+        array[array.Length - 1] = item;
 
-        foreach (T value in values)
+    }
+    public T Find(Predicate<T> predicate)
+    {
+        foreach (T item in array)
         {
-            if (item(value))
+            if (predicate(item))
             {
-                return value;
+                return item;
             }
         }
-
-        return default(T);
+        throw new NotFoundException();
     }
-    public List<T> FindAll(Predicate<T> item)
+    public List<T> FindAll(Predicate<T> predicate)
     {
-        if (item == null)
+        List<T> list = new List<T>();   
+        foreach (T item in array)
         {
-            throw new NotFoundException(nameof(item));
-        }
-
-        List<T> result = new List<T>();
-
-        foreach (T value in values)
-        {
-            if (item(value))
+            if (predicate(item))
             {
-                result.Add(value);
+                list.Add(item); 
             }
         }
-
-        return result;
+        return list;
     }
+    public void Remove(T item)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            T num = array[i];
+            if (num.Equals(item))
+            {
+                for (int j = i; j < array.Length - 1; j++)
+                {
+                    array[j] = array[j + 1];
+                }
+                Array.Resize(ref array, array.Length - 1);
+                return;
+            }
+        }
+        throw new NotFoundException();
+    }
+    //1 2 3 4 5
+    public void RemoveAll(Predicate<T> predicate)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            T num = array[i];
+
+            if (predicate(array[i]))
+            {
+                if (i==array.Length-1)
+                {
+                    Array.Resize(ref array, array.Length - 1);
+                }
+                else
+                {
+                    for (int j = i; j < array.Length - 1; j++)
+                    {
+                        array[j] = array[j + 1];
+                    }
+                    i--;
+                    Array.Resize(ref array, array.Length - 1);
+                }
+               
+            }
+        }
+    }
+
     public IEnumerator<T> GetEnumerator()
     {
-        throw new NotImplementedException();
+        foreach (var item in array)
+        {
+            yield return item;
+        }
+
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        throw new NotImplementedException();
+        return array.GetEnumerator();
     }
 }

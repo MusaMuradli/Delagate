@@ -3,3 +3,13 @@ C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.GeneratedMSBu
 C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.AssemblyInfoInputs.cache
 C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.AssemblyInfo.cs
 C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\Delagate\Delagate\bin\Debug\net6.0\Delagate.exe
+C:\Users\Owner\Desktop\Delagate\Delagate\bin\Debug\net6.0\Delagate.deps.json
+C:\Users\Owner\Desktop\Delagate\Delagate\bin\Debug\net6.0\Delagate.runtimeconfig.json
+C:\Users\Owner\Desktop\Delagate\Delagate\bin\Debug\net6.0\Delagate.dll
+C:\Users\Owner\Desktop\Delagate\Delagate\bin\Debug\net6.0\Delagate.pdb
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.dll
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\refint\Delagate.dll
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.pdb
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\Delagate.genruntimeconfig.cache
+C:\Users\Owner\Desktop\Delagate\Delagate\obj\Debug\net6.0\ref\Delagate.dll
